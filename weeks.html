@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" translate="no" class="notranslate">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="google" content="notranslate" />
+  <title>BEZ — every week</title>
+  <meta name="description" content="The BEZ menu is never the same: written on Monday, served Tuesday to Sunday, gone after. This week, the weeks we already ate, and what's coming next." />
+  <meta name="theme-color" content="#7aa9b8" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <!-- concept, design & code by ghostly.grl ♥ -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=DM+Mono:wght@400;500&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..900,0..100,0..1;1,9..144,300..900,0..100,0..1&family=Pinyon+Script&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css?v=20261028-22" />
+  <link rel="stylesheet" href="css/weeks.css?v=20261028-24" />
+</head>
+<body class="is-loading" data-page="weeks">
+
+  <div class="loader" id="loader" aria-hidden="true">
+    <p class="ld-k mono">every week · never the same</p>
+    <p class="ld-pct mono"><b id="ldPct">000</b>% plants</p>
+    <div class="ld-list"><s>last week</s><s>the week before</s><s>repeats</s><s>leftovers</s><s>monday</s></div>
+    <p class="ld-word" id="ldWord">New.</p>
+  </div>
+
+  <div class="cursor" id="cursor" aria-hidden="true"><i class="cursor__pea"></i><span class="cursor__label" id="cursorLabel"></span></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <header class="hdr" id="hdr">
+    <a class="logo" href="index.html" aria-label="BEZ home" data-cursor="home"><i>B</i><i>e</i><i>z</i></a>
+    <nav class="hdr__nav" aria-label="main">
+      <a href="menu.html">Menu</a>
+      <a href="weeks.html" aria-current="page">Every week</a>
+      <a href="taken-out.html">Taken out</a>
+      <a href="kitchen.html">The kitchen</a>
+      <a href="kitchen.html#book">Book a table</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- ========== 01 · THIS WEEK — ref: ramu NOODLES site (framed page on blue, giant title, photo, YOUR BOWLS+ row) ========== -->
+    <section class="nw" id="thisweek">
+      <div class="nw__page" id="nwPage">
+        <div class="nw__nav">
+          <span class="nw__logo">b</span>
+          <p class="nw__links mono"><a href="#thisweek" data-jump>this week</a><a href="#lastweeks" data-jump>last weeks</a><a href="#nextweek" data-jump>next week</a><a href="#drop" data-jump>the drop</a></p>
+          <a class="nw__shop mono" href="menu.html" data-cursor="eat it">menu</a>
+        </div>
+        <h1 class="nw__t" aria-label="This week"><span data-fit data-fit-h=".26" id="nwT">Week <span data-week>44</span></span></h1>
+        <p class="nw__sub">This week's nine</p>
+        <p class="nw__p mono">bez writes a new menu every monday, while the doors are shut. it's served tuesday to sunday and then it's gone: nine dishes, <span data-week data-fmt="range">27.10 — 1.11</span>. <span data-weekday></span></p>
+        <figure class="nw__hero" data-cursor="this week">
+          <div class="slot" data-img="img/WEEKS/hero.jpg" data-label="hero.jpg · this week's table from above: a few dishes, bowls, chopsticks. 16:9" style="--tone:#d8b98a"></div>
+        </figure>
+        <div class="nw__row">
+          <h2 class="nw__h">This week +</h2>
+          <p class="mono">tag us @bez.zizkov<br />show us your plate!</p>
+        </div>
+        <div class="nw__thumbs">
+          <a class="nw__th" href="menu.html#cards" data-cursor="on the menu"><div class="slot" data-img="img/WEEKS/this-1.jpg" data-label="this-1.jpg · a dish from this week, close. 1:1" style="--tone:#b8743a"></div></a>
+          <a class="nw__th" href="menu.html#cards" data-cursor="on the menu"><div class="slot" data-img="img/WEEKS/this-2.jpg" data-label="this-2.jpg · people eating, hands, a busy table. 1:1" style="--tone:#a8322a"></div></a>
+          <a class="nw__th" href="menu.html#cards" data-cursor="on the menu"><div class="slot" data-img="img/WEEKS/this-3.jpg" data-label="this-3.jpg · a bowl with greens, from above. 1:1" style="--tone:#5d7a3c"></div></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 02 · LAST WEEKS — ref: Plately (giant serif, plate carousel, dark lower half, three cards) ========== -->
+    <section class="pl" id="lastweeks">
+      <div class="pl__page">
+        <div class="pl__nav mono"><span>the archive</span><span>gone, maybe back</span></div>
+        <h2 class="pl__t">Last weeks.<sup>™</sup></h2>
+        <div class="pl__stage" id="plStage">
+          <button class="pl__arrow pl__arrow--l" id="plPrev" aria-label="the week before" data-cursor="older">‹</button>
+          <div class="pl__plates" id="plPlates"></div>
+          <button class="pl__arrow pl__arrow--r" id="plNext" aria-label="the week after" data-cursor="newer">›</button>
+        </div>
+        <div class="pl__low">
+          <p class="pl__q">Missed a week?<br /><i>Vote, and it might come back.</i></p>
+          <p class="pl__wk mono" id="plWk">week 43 · smoke week</p>
+          <div class="pl__cards" id="plCards"></div>
+          <div class="pl__dots" id="plDots"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 03 · NEXT WEEK — ref: Sugar Rush poster (wonky red type, blue outlines, dates badge, pastries) ========== -->
+    <section class="sr" id="nextweek">
+      <p class="sr__brand">Next week</p>
+      <p class="sr__kick">Get your weekly dose of without<br /><span>no butter · no eggs · no regrets</span></p>
+      <p class="sr__src">Source of sugar<br />Instagrammable</p>
+      <h2 class="sr__t" aria-label="Sweet week"><span>“sweet</span><span>week”</span></h2>
+      <span class="sr__star sr__star--1" aria-hidden="true">✱</span>
+      <span class="sr__star sr__star--2" aria-hidden="true">✱</span>
+      <p class="sr__badge sr__badge--a">fully loaded</p>
+      <p class="sr__badge sr__badge--d">served <span data-week="1" data-fmt="range">3.11 — 8.11</span></p>
+      <div class="sr__a" id="srA" data-cursor="no butter">
+        <div class="slot slot--cut" data-img="img/WEEKS/next-1.png" data-label="next-1.png · a cinnamon roll, cutout. 1:1" style="--tone:#f0a23a; --shape: 50%"></div>
+      </div>
+      <div class="sr__b" id="srB" data-cursor="no eggs">
+        <div class="slot slot--cut" data-img="img/WEEKS/next-2.png" data-label="next-2.png · a small berry tartlet, cutout. 1:1" style="--tone:#c9813c; --shape: 50%"></div>
+      </div>
+      <p class="sr__badge sr__badge--c">pure joy</p>
+      <p class="sr__low">All your worries<br />pause here.<span>cinnamon šnek · berry tartlets · buchty</span></p>
+      <p class="sr__foot">Get your weekly dose of without</p>
+    </section>
+
+    <!-- ========== 04 · THE DROP — ref: BITE ME site (lime page, giant green title behind a photo, burger, dark green footer) ========== -->
+    <section class="bm" id="drop">
+      <div class="bm__top">
+        <div class="slot bm__ph" data-img="img/WEEKS/drop-top.jpg" data-label="drop-top.jpg · a close, glossy texture (chocolate, sauce). 16:9" style="--tone:#b55a26"></div>
+        <h2 class="bm__t" aria-label="The drop"><span data-fit id="bmT">The drop</span></h2>
+        <a class="bm__pill" href="kitchen.html#book" data-cursor="book">Book a table</a>
+      </div>
+      <i class="bm__sq" aria-hidden="true">〰</i>
+      <h3 class="bm__h">New week,<br />new plates.</h3>
+      <p class="bm__p">Every Monday night we send the new menu before anyone else sees it. Nine dishes, one email, zero animals.</p>
+      <div class="bm__mid">
+        <div class="bm__col"><p class="bm__k">Hours</p><p>Mon: closed, writing<br />Tue to Fri: 12 — 23<br />Sat to Sun: 10 — 23</p></div>
+        <div class="bm__fig" id="bmFig" data-cursor="this week's">
+          <div class="slot slot--cut" data-img="img/WEEKS/drop.png" data-label="drop.png · a stacked wrap on a skewer, cutout. 2:3" style="--tone:#9b3a20; --shape: 46%"></div>
+          <a class="bm__badge" href="menu.html">see this week</a>
+        </div>
+        <div class="bm__col bm__col--r"><p class="bm__k">Find us</p><p>Bořivojova 57<br />Praha 3, Žižkov<br />hello@bez.cz</p></div>
+      </div>
+      <form class="bm__form" id="dropForm" autocomplete="off">
+        <i class="bm__sq" aria-hidden="true">〰</i>
+        <h3 class="bm__h2">Get the menu<br />before it's cooked!</h3>
+        <div class="bm__in">
+          <label class="sr-only" for="dropMail">your email</label>
+          <input id="dropMail" type="email" placeholder="your@email.cz" required />
+          <button type="submit" data-cursor="drop it">Send me week <span data-week="1">45</span></button>
+        </div>
+        <p class="bm__note mono" id="dropNote">one email a week. on monday night. we never send meat.</p>
+      </form>
+    </section>
+
+    <footer class="ft">
+      <h2 class="ft__title soft"><span class="line-mask"><span class="ln">Come hungry.</span></span><span class="line-mask"><span class="ln">Leave without.</span></span></h2>
+      <div class="ft__grid">
+        <div><p class="ft__k">Sitemap</p><p class="ft__links"><a href="index.html">Home</a><a href="menu.html">Menu</a><a href="weeks.html">Every week</a><a href="taken-out.html">Taken out</a><a href="kitchen.html">The kitchen</a></p></div>
+        <div><p class="ft__k">Find us</p><p class="ft__links"><span>Bořivojova 57, Praha 3</span><span>+420 555 010 057</span><a href="mailto:hello@bez.cz">hello@bez.cz</a><span id="kitchenState">kitchen: checking…</span></p></div>
+        <div><p class="ft__k">Hours</p><p class="ft__links"><span>Mon: closed, writing the new menu</span><span>Tue to Fri: 12 PM — 11 PM</span><span>Sat to Sun: 10 AM — 11 PM</span></p></div>
+      </div>
+      <div class="ft__bottom">
+        <span>© 2026 BEZ — a concept. never the same menu twice.</span>
+        <span data-clock>praha 00:00</span>
+        <span class="ft-sign">concept, design &amp; code by <span class="sig">ghostly.grl</span> ♥</span>
+      </div>
+    </footer>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/main.js?v=20261028-22"></script>
+  <script src="js/weeks.js?v=20261028-24"></script>
+</body>
+<!--
+   *    /\_/\      +
+       ( o.o )   <3  ghostly.grl
+   +    > ^ <   🗓     *
+       never the same menu twice.
+-->
+</html>

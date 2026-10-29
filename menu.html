@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" translate="no" class="notranslate">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="google" content="notranslate" />
+  <title>BEZ — this week's menu, without</title>
+  <meta name="description" content="The BEZ menu: svíčková without the cow, guláš without beef, poke without tuna. It changes every week. Pick what you want to leave out." />
+  <meta name="theme-color" content="#0b0b0b" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <!-- concept, design & code by ghostly.grl ♥ -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=DM+Mono:wght@400;500&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..900,0..100,0..1;1,9..144,300..900,0..100,0..1&family=Pinyon+Script&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css?v=20261028-22" />
+  <link rel="stylesheet" href="css/menu.css?v=20261028-22" />
+</head>
+<body class="is-loading" data-page="menu">
+
+  <!-- ================= LOADER ================= -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <p class="ld-k mono">the menu, taken apart</p>
+    <p class="ld-pct mono"><b id="ldPct">000</b>% plants</p>
+    <div class="ld-list"><s>beef</s><s>tuna</s><s>cream</s><s>cheese</s><s>the cow</s></div>
+    <p class="ld-word" id="ldWord">Menu.</p>
+  </div>
+
+  <div class="cursor" id="cursor" aria-hidden="true"><i class="cursor__pea"></i><span class="cursor__label" id="cursorLabel"></span></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <header class="hdr" id="hdr">
+    <a class="logo" href="index.html" aria-label="BEZ home" data-cursor="home"><i>B</i><i>e</i><i>z</i></a>
+    <nav class="hdr__nav" aria-label="main">
+      <a href="menu.html" aria-current="page">Menu</a>
+      <a href="weeks.html">Every week</a>
+      <a href="taken-out.html">Taken out</a>
+      <a href="kitchen.html">The kitchen</a>
+      <a href="index.html#visit">Book a table</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- ========== 01 · THE MENU — ref: MISO LAB (red block on black, oval photo, upside-down line) ========== -->
+    <section class="lab" id="lab">
+      <div class="lab__block" id="labBlock">
+        <h1 class="lab__t" id="labT">The menu</h1>
+        <p class="lab__sub">Dishes named after what they're missing.<br />Different every week.</p>
+        <div class="lab__oval" id="labOval" data-cursor="ladle, no bones">
+          <div class="slot" data-img="img/MENU/hero.jpg" data-label="hero.jpg · cook ladling soup into a bowl, dark, red light. 3:4" style="--tone:#5a2414"></div>
+        </div>
+        <p class="lab__flip" id="labFlip" data-cursor="flip it" aria-label="bez masa, without meat"><span class="lab__flipin"><span class="lab__a">bez masa</span><span class="lab__b">without meat</span></span></p>
+      </div>
+      <p class="lab__k mono">this week · <span data-week data-fmt="both">week 44</span> · 9 dishes · 0 animals</p>
+      <p class="lab__k lab__k--r mono">scroll for the cards ↓</p>
+    </section>
+
+    <!-- ========== 02 · THE CARDS — ref: BÁNH BAO / famous vietnamese cafe menu cards ========== -->
+    <section class="cards" id="cards">
+      <div class="cards__head">
+        <h2 class="cards__t">Pick what to<br />leave out</h2>
+        <div class="cards__chips" id="chips" role="group" aria-label="leave out">
+          <button class="chip" data-tag="gluten" aria-pressed="false">gluten</button>
+          <button class="chip" data-tag="nuts" aria-pressed="false">nuts</button>
+          <button class="chip" data-tag="soy" aria-pressed="false">soy</button>
+          <button class="chip" data-tag="spicy" aria-pressed="false">spicy</button>
+        </div>
+        <p class="cards__count mono" id="cardsCount">9 of 9 dishes left. the animals were already gone.</p>
+        <p class="cards__week mono">this week's nine. gone on sunday. <span data-weekday></span> <a href="weeks.html">every week →</a></p>
+      </div>
+      <div class="cards__grid" id="cardsGrid"></div>
+    </section>
+
+    <!-- ========== 03 · SMOKED CHILLI TOFU — ref: MILD CHILLI TOFU packaging ========== -->
+    <section class="tofu" id="tofu">
+      <h2 class="tofu__t">Smoked chilli tofu</h2>
+      <div class="tofu__back" aria-hidden="true">
+        <p class="tofu__row" data-dir="-1"><span>TOFU TOFU TOFU TOFU TOFU TOFU</span></p>
+        <p class="tofu__row" data-dir="1"><span>TOFU TOFU TOFU TOFU TOFU TOFU</span></p>
+        <p class="tofu__row" data-dir="-1"><span>TOFU TOFU TOFU TOFU TOFU TOFU</span></p>
+      </div>
+      <p class="tofu__v tofu__v--l">good source of protein</p>
+      <p class="tofu__v tofu__v--r">made in žižkov with love</p>
+      <span class="tofu__blob">no<br />meat</span>
+      <p class="tofu__cert"><span>Certified</span><b>B</b><span>Bez kitchen</span></p>
+      <div class="tofu__bowl" id="tofuBowl" data-cursor="smoked twice">
+        <div class="slot slot--cut" data-img="img/MENU/tofu.png" data-label="tofu.png · bowl of tofu + noodles + greens from above, chopsticks, cutout. 1:1" style="--tone:#e7b75e"></div>
+      </div>
+      <div class="tofu__label">
+        <button class="tofu__bar" id="tofuBar" aria-label="scan the barcode" data-cursor="scan">
+          <span class="mono">serving suggestion</span>
+          <svg viewBox="0 0 120 60" aria-hidden="true" id="barcode"></svg>
+          <span class="mono">8 590000 000 0g</span>
+        </button>
+        <div class="tofu__ing">
+          <p><b>Ingredients:</b> smoked soy beans, chilli, red pepper, rice noodles, bok choy, broccolini, sesame.</p>
+          <p><b>Contains soy.</b> Made in a kitchen that also handles sesame, gluten and opinions.</p>
+          <p>Eat within 3 minutes of arriving at the table.</p>
+        </div>
+        <table class="tofu__facts" id="facts">
+          <caption>Without facts</caption>
+          <thead><tr><th></th><th>per plate</th><th>per 100g</th></tr></thead>
+          <tbody>
+            <tr><td>Meat</td><td data-n="212">0g</td><td data-n="88">0g</td></tr>
+            <tr><td>Milk</td><td data-n="140">0g</td><td data-n="61">0g</td></tr>
+            <tr><td>Eggs</td><td data-n="2">0</td><td data-n="1">0</td></tr>
+            <tr><td>Fish</td><td data-n="96">0g</td><td data-n="40">0g</td></tr>
+            <tr><td>Regret</td><td data-n="100">0%</td><td data-n="100">0%</td></tr>
+          </tbody>
+        </table>
+        <p class="tofu__g">249 Kč</p>
+        <div class="tofu__arch" aria-label="Bez kitchen, food without">
+          <svg viewBox="0 0 200 110" aria-hidden="true">
+            <defs><path id="archPath" d="M 28 100 A 72 72 0 0 1 172 100" /></defs>
+            <path class="tofu__ring" d="M 10 100 A 90 90 0 0 1 190 100 L 150 100 A 50 50 0 0 0 50 100 Z" />
+            <text><textPath href="#archPath" startOffset="50%" text-anchor="middle">BEZ KITCHEN</textPath></text>
+          </svg>
+          <p>Food without™</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 04 · SHOYU, BEZ KOSTÍ — ref: ZUKAE (photo of someone slurping, wavy cream title) ========== -->
+    <section class="zuk" id="shoyu">
+      <div class="slot zuk__photo" id="zukPhoto" data-img="img/MENU/shoyu.jpg" data-label="shoyu.jpg · someone slurping ramen, dark, close. 4:5" style="--tone:#2a1a14" data-cursor="slurp louder"></div>
+      <svg class="zuk__fx" aria-hidden="true"><filter id="wavy"><feTurbulence id="wavyT" type="fractalNoise" baseFrequency="0.012 0.04" numOctaves="1" seed="3" /><feDisplacementMap in="SourceGraphic" scale="14" /></filter></svg>
+      <div class="zuk__title">
+        <h2 class="zuk__t" id="zukT">shoyu</h2>
+        <p class="zuk__line"><i></i><span>bez kostí</span><i></i></p>
+      </div>
+      <p class="zuk__sub mono">ramen "without bones": a twelve-hour broth of kombu, shiitake and charred onion.<br /><s>pork bone</s> mushroom. <s>egg</s> marinated not-egg. 229 Kč</p>
+    </section>
+
+    <!-- ========== 05 · NO-CRAB CURRY CLUB — ref: CRAB CURRY CLUB (toddy shop) ========== -->
+    <section class="club" id="club">
+      <div class="slot club__photo" id="clubPhoto" data-img="img/MENU/curry.jpg" data-label="curry.jpg · curry on a dark table, pots and hands, moody. 4:5" style="--tone:#3a2a1c"></div>
+      <div class="club__poster">
+        <p class="club__pre"><span>Bez</span><svg viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="27" /><circle cx="30" cy="30" r="10" /><path d="M30 3 V 14 M30 46 V 57 M3 30 H 14 M46 30 H 57" /></svg><span>Žižkov</span></p>
+        <p class="club__presents">presents</p>
+        <h2 class="club__t" aria-label="No-crab curry club">
+          <span class="club__l club__l--1">No-crab</span>
+          <span class="club__l club__l--2">Curry</span>
+          <span class="club__l club__l--3">Club</span>
+        </h2>
+        <p class="club__at"><i>at</i><span>thursday nights</span></p>
+        <p class="club__note mono">jackfruit "crab", coconut, curry leaves, too much rice. every thursday from 7 pm. 229 Kč</p>
+      </div>
+    </section>
+
+    <!-- ========== 06 · SWEET SESAME SEITAN NOODLES — ref: sweet sesame steak ramen ========== -->
+    <section class="ramen" id="ramen">
+      <div class="ramen__blob" id="ramenBlob">
+        <p class="ramen__sweet">Sweet</p>
+        <h2 class="ramen__t">Sesame<br />Seitan<br />Noodles</h2>
+        <i class="ramen__dot" style="--x:-6%; --y:8%; --r:-30deg"></i>
+        <i class="ramen__dot" style="--x:4%; --y:-6%; --r:10deg"></i>
+        <i class="ramen__dot" style="--x:96%; --y:4%; --r:40deg"></i>
+        <i class="ramen__dot" style="--x:102%; --y:46%; --r:80deg"></i>
+        <i class="ramen__dot" style="--x:-8%; --y:62%; --r:-60deg"></i>
+        <i class="ramen__dot" style="--x:30%; --y:104%; --r:0deg"></i>
+        <i class="ramen__dot" style="--x:80%; --y:98%; --r:20deg"></i>
+      </div>
+      <div class="ramen__bowl" id="ramenBowl" data-cursor="twirl">
+        <div class="slot slot--cut" data-img="img/MENU/noodles.png" data-label="noodles.png · noodles twirled up on a fork, cutout. 3:4" style="--tone:#b35a2c; --shape: 30% 30% 50% 50%"></div>
+      </div>
+      <p class="ramen__note mono">seitan glazed in sweet sesame, hand-pulled noodles, chilli oil.<br />without the steak. twirl responsibly. 269 Kč</p>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="ft">
+      <h2 class="ft__title soft"><span class="line-mask"><span class="ln">Come hungry.</span></span><span class="line-mask"><span class="ln">Leave without.</span></span></h2>
+      <div class="ft__grid">
+        <div><p class="ft__k">Sitemap</p><p class="ft__links"><a href="index.html">Home</a><a href="menu.html">Menu</a><a href="weeks.html">Every week</a><a href="taken-out.html">Taken out</a><a href="kitchen.html">The kitchen</a></p></div>
+        <div><p class="ft__k">Find us</p><p class="ft__links"><span>Bořivojova 57, Praha 3</span><span>+420 555 010 057</span><a href="mailto:hello@bez.cz">hello@bez.cz</a><span id="kitchenState">kitchen: checking…</span></p></div>
+        <div><p class="ft__k">Hours</p><p class="ft__links"><span>Mon: closed, writing the new menu</span><span>Tue to Fri: 12 PM — 11 PM</span><span>Sat to Sun: 10 AM — 11 PM</span></p></div>
+      </div>
+      <div class="ft__bottom">
+        <span>© 2026 BEZ — a concept. prices in Kč, animals in 0.</span>
+        <span data-clock>praha 00:00</span>
+        <span class="ft-sign">concept, design &amp; code by <span class="sig">ghostly.grl</span> ♥</span>
+      </div>
+    </footer>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/main.js?v=20261028-22"></script>
+  <script src="js/menu.js?v=20261028-22"></script>
+</body>
+<!--
+   *    /\_/\      +
+       ( o.o )   <3  ghostly.grl
+   +    > ^ <   🌱     *
+       the menu, without.
+-->
+</html>

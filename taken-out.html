@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" translate="no" class="notranslate">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="google" content="notranslate" />
+  <title>BEZ — taken out</title>
+  <meta name="description" content="Everything BEZ took out of the menu, and what we put back: beef for king oyster, tuna for watermelon, cream for oat. Drag to swap." />
+  <meta name="theme-color" content="#1f6f78" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <!-- concept, design & code by ghostly.grl ♥ -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=DM+Mono:wght@400;500&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..900,0..100,0..1;1,9..144,300..900,0..100,0..1&family=Pinyon+Script&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css?v=20261028-22" />
+  <link rel="stylesheet" href="css/taken-out.css?v=20261028-22" />
+</head>
+<body class="is-loading" data-page="taken-out">
+
+  <div class="loader" id="loader" aria-hidden="true">
+    <p class="ld-k mono">taken out · put back</p>
+    <p class="ld-pct mono"><b id="ldPct">000</b>% plants</p>
+    <div class="ld-list"><s>beef</s><s>tuna</s><s>cream</s><s>eggs</s><s>bacon</s></div>
+    <p class="ld-word" id="ldWord">Out.</p>
+  </div>
+
+  <div class="cursor" id="cursor" aria-hidden="true"><i class="cursor__pea"></i><span class="cursor__label" id="cursorLabel"></span></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <header class="hdr" id="hdr">
+    <a class="logo" href="index.html" aria-label="BEZ home" data-cursor="home"><i>B</i><i>e</i><i>z</i></a>
+    <nav class="hdr__nav" aria-label="main">
+      <a href="menu.html">Menu</a>
+      <a href="weeks.html">Every week</a>
+      <a href="taken-out.html" aria-current="page">Taken out</a>
+      <a href="kitchen.html">The kitchen</a>
+      <a href="index.html#visit">Book a table</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- ========== 01 · TAKEN OUT — ref: BASICS (giant yellow type behind a portrait, side tag, slapped label) ========== -->
+    <section class="basics" id="basics">
+      <div class="slot basics__bg" id="basicsBg" data-img="img/TAKEN/hero-bg.jpg" data-label="hero-bg.jpg · a street or a café table, sunny, a bit blurry. 16:9" style="--tone:#2a7f87"></div>
+      <h1 class="basics__t" aria-label="Taken out"><span data-fit id="basicsT">Taken out</span></h1>
+      <div class="basics__person" id="basicsPerson" data-cursor="put it back">
+        <div class="slot slot--cut" data-img="img/TAKEN/hero-person.png" data-label="hero-person.png · someone holding up a dish or eating, waist up, cutout. 3:4" style="--tone:#b5713a; --shape: 46% 46% 10% 10%"></div>
+      </div>
+      <p class="basics__side">Žižkov<br />style</p>
+      <p class="basics__tag" id="basicsTag">Put<br />back</p>
+      <p class="basics__k mono">everything we took out of the menu,<br />and what we put back instead. ↓</p>
+    </section>
+
+    <!-- ========== 02 · THE SWAPS — ref: three stacked macro textures (bread / avocado / salmon) ========== -->
+    <section class="swaps" id="swaps">
+      <div class="swaps__head">
+        <h2 class="swaps__t">The swaps</h2>
+        <p class="swaps__hint mono">drag across a stripe to put it back ⇆</p>
+      </div>
+      <div class="swaps__list" id="swapsList"></div>
+    </section>
+
+    <!-- ========== 03 · PUT BACK — ref: BIBIMBAP poster (colour blocks, pill, giant title, bowl) ========== -->
+    <section class="bbp" id="putback">
+      <div class="bbp__block bbp__block--a"></div>
+      <div class="bbp__block bbp__block--b"></div>
+      <div class="bbp__block bbp__block--c"></div>
+      <div class="bbp__block bbp__block--d"></div>
+      <div class="bbp__in">
+        <span class="bbp__pill">Since 2026</span>
+        <h2 class="bbp__t">Put back</h2>
+        <p class="bbp__sub">Staple swaps from a Žižkov kitchen</p>
+        <div class="bbp__bowl" id="bbpBowl" data-cursor="all of it, back">
+          <div class="slot slot--cut" data-img="img/TAKEN/bowl.png" data-label="bowl.png · a full bowl from above (bibimbap-style, lots of colours), cutout. 1:1" style="--tone:#c7742c"></div>
+        </div>
+      </div>
+      <p class="bbp__c bbp__c--l">The Bez kitchen<br />57 Bořivojova St</p>
+      <p class="bbp__c bbp__c--r">www.bez.cz</p>
+    </section>
+
+    <!-- ========== 04 · NEVER MISSED — ref: NEW ORLEANS "best bowls" magazine cover ========== -->
+    <section class="cover" id="cover">
+      <p class="cover__kick cover__kick--l">Travel<br /><b>nowhere</b></p>
+      <p class="cover__kick cover__kick--r">Top things<br /><b>0 animals</b></p>
+      <h2 class="cover__mast"><span data-fit id="coverMast">Žižkov</span></h2>
+      <figure class="cover__c cover__c--1" data-cursor="never missed"><div class="slot" data-img="img/TAKEN/cover-1.png" data-label="cover-1.jpg · bowl from above. 1:1" style="--tone:#d49a5a"></div></figure>
+      <figure class="cover__c cover__c--2" data-cursor="never missed"><div class="slot" data-img="img/TAKEN/cover-2.png" data-label="cover-2.jpg · bowl from above. 1:1" style="--tone:#c8452a"></div></figure>
+      <figure class="cover__c cover__c--3" data-cursor="never missed"><div class="slot" data-img="img/TAKEN/cover-3.png" data-label="cover-3.jpg · bowl from above. 1:1" style="--tone:#7c9a3a"></div></figure>
+      <figure class="cover__c cover__c--4" data-cursor="never missed"><div class="slot" data-img="img/TAKEN/cover-4.png" data-label="cover-4.jpg · bowl from above. 1:1" style="--tone:#e0b24a"></div></figure>
+      <svg class="cover__curve" viewBox="0 0 1000 620" aria-label="Never missed">
+        <defs>
+          <path id="curveA" d="M 40 300 C 260 120, 560 120, 960 230" />
+          <path id="curveB" d="M 60 470 C 360 330, 640 360, 960 470" />
+        </defs>
+        <text class="cover__w"><textPath id="tpA" href="#curveA" startOffset="0%">Never</textPath></text>
+        <text class="cover__w"><textPath id="tpB" href="#curveB" startOffset="0%">missed</textPath></text>
+      </svg>
+      <p class="cover__foot mono">10 things nobody asked about · page 57</p>
+    </section>
+
+    <!-- ========== 05 · BEZ-TIME — ref: MIE-TIME (two stacked photos, white captions) ========== -->
+    <section class="mie" id="mie">
+      <blockquote class="mie__q mie__q--l"><p>"I came for the guláš. I left without asking where the beef was."</p><cite class="mono">— Jana, Vinohrady</cite></blockquote>
+      <div class="mie__col">
+        <figure class="mie__ph" id="mie1"><div class="slot" data-img="img/TAKEN/mie-1.jpg" data-label="mie-1.jpg · close-up of chillies, spices, crumbs. 4:3" style="--tone:#b23a22"></div><figcaption>smoked paprika, chilli, fennel seed.<br />no fish sauce. nobody noticed.</figcaption></figure>
+        <figure class="mie__ph" id="mie2"><div class="slot" data-img="img/TAKEN/mie-2.jpg" data-label="mie-2.jpg · a soup bowl from above, dark table. 4:3" style="--tone:#3f4a3a"></div><p class="mie__t">Bez-time.</p><figcaption>miso, silken tofu, spring onion. no bonito.</figcaption></figure>
+      </div>
+      <blockquote class="mie__q mie__q--r"><p>"My dad asked for the bacon. He ate the rice paper. Twice."</p><cite class="mono">— Tomáš, Žižkov</cite></blockquote>
+    </section>
+
+    <footer class="ft">
+      <h2 class="ft__title soft"><span class="line-mask"><span class="ln">Come hungry.</span></span><span class="line-mask"><span class="ln">Leave without.</span></span></h2>
+      <div class="ft__grid">
+        <div><p class="ft__k">Sitemap</p><p class="ft__links"><a href="index.html">Home</a><a href="menu.html">Menu</a><a href="weeks.html">Every week</a><a href="taken-out.html">Taken out</a><a href="kitchen.html">The kitchen</a></p></div>
+        <div><p class="ft__k">Find us</p><p class="ft__links"><span>Bořivojova 57, Praha 3</span><span>+420 555 010 057</span><a href="mailto:hello@bez.cz">hello@bez.cz</a><span id="kitchenState">kitchen: checking…</span></p></div>
+        <div><p class="ft__k">Hours</p><p class="ft__links"><span>Mon: closed, writing the new menu</span><span>Tue to Fri: 12 PM — 11 PM</span><span>Sat to Sun: 10 AM — 11 PM</span></p></div>
+      </div>
+      <div class="ft__bottom">
+        <span>© 2026 BEZ — a concept. everything taken out was put back better.</span>
+        <span data-clock>praha 00:00</span>
+        <span class="ft-sign">concept, design &amp; code by <span class="sig">ghostly.grl</span> ♥</span>
+      </div>
+    </footer>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/main.js?v=20261028-22"></script>
+  <script src="js/taken-out.js?v=20261028-22"></script>
+</body>
+<!--
+   *    /\_/\      +
+       ( o.o )   <3  ghostly.grl
+   +    > ^ <   🌱     *
+       taken out. put back better.
+-->
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" translate="no" class="notranslate">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="google" content="notranslate" />
+  <title>BEZ — the kitchen</title>
+  <meta name="description" content="The BEZ kitchen in Žižkov: what we make by hand, a day from 07:00 to the last guláš, the crew, and a table for you." />
+  <meta name="theme-color" content="#7a1410" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <!-- concept, design & code by ghostly.grl ♥ -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=DM+Mono:wght@400;500&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..900,0..100,0..1;1,9..144,300..900,0..100,0..1&family=Pinyon+Script&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css?v=20261028-22" />
+  <link rel="stylesheet" href="css/kitchen.css?v=20261028-22" />
+</head>
+<body class="is-loading" data-page="kitchen">
+
+  <div class="loader" id="loader" aria-hidden="true">
+    <p class="ld-k mono">the kitchen · kuchyně</p>
+    <p class="ld-pct mono"><b id="ldPct">000</b>% plants</p>
+    <div class="ld-list"><s>stock cubes</s><s>microwave</s><s>freezer</s><s>shortcuts</s><s>butter</s></div>
+    <p class="ld-word" id="ldWord">Hot.</p>
+  </div>
+
+  <div class="cursor" id="cursor" aria-hidden="true"><i class="cursor__pea"></i><span class="cursor__label" id="cursorLabel"></span></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <header class="hdr" id="hdr">
+    <a class="logo" href="index.html" aria-label="BEZ home" data-cursor="home"><i>B</i><i>e</i><i>z</i></a>
+    <nav class="hdr__nav" aria-label="main">
+      <a href="menu.html">Menu</a>
+      <a href="weeks.html">Every week</a>
+      <a href="taken-out.html">Taken out</a>
+      <a href="kitchen.html" aria-current="page">The kitchen</a>
+      <a href="#book" data-jump>Book a table</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- ========== 01 · THE KITCHEN — ref: FOOD & RESTAURANT (dark red, one figure, noodles pouring into a bowl) ========== -->
+    <section class="fr" id="fr">
+      <p class="fr__k">The kitchen<br />&amp; restaurant</p>
+      <p class="fr__cz">kuchyně</p>
+      <h1 class="fr__t" aria-label="The kitchen"><span data-fit id="frT">kitchen</span></h1>
+      <div class="fr__fig" id="frFig" data-cursor="pull">
+        <div class="slot slot--cut" data-img="img/KITCHEN/hero.png" data-label="hero.png · a cook pulling a rope of noodle dough between two hands, cutout. 3:2" style="--tone:#e2763a; --shape: 46% 46% 12% 12%"></div>
+      </div>
+      <p class="fr__v fr__v--l mono">open kitchen · bořivojova 57</p>
+      <p class="fr__v fr__v--r mono">everything made here, nothing hidden</p>
+      <p class="fr__foot mono">copyright © bez kitchen co., ltd. · <span data-clock>praha 00:00</span> · <span id="frState">checking the stove…</span></p>
+    </section>
+
+    <!-- ========== 02 · MADE HERE — ref: THE TWIRL HOUSE (exploded noodle bowl, orange pills around it) ========== -->
+    <section class="tw" id="made">
+      <div class="tw__logo"><span>The</span><b>Bez</b><span>house</span></div>
+      <h2 class="tw__t">Nothing from a packet.<br />Everything from here.</h2>
+      <p class="tw__sub">Broths that go on at ten, noodles pulled to order, tofu smoked in the yard. The only thing we buy ready-made is the electricity. And the menu is rewritten every Monday, so nobody in here gets bored.</p>
+      <div class="tw__stage" id="twStage">
+        <div class="tw__img" id="twImg" data-cursor="take it apart">
+          <div class="slot slot--cut" data-img="img/KITCHEN/exploded.png" data-label="exploded.png · a bowl with its ingredients flying up out of it (noodles, tofu, greens, chopsticks), cutout. 3:4" style="--tone:#d6893a; --shape: 40% 40% 50% 50%"></div>
+        </div>
+        <button class="tw__pill" style="--x:6%; --y:30%; --r:-12deg" data-say="kombu, shiitake, charred onion. twelve hours. no bones.">12-hour broth</button>
+        <button class="tw__pill" style="--x:70%; --y:22%; --r:10deg" data-say="flour, water, salt, a lot of slapping on the counter.">hand-pulled</button>
+        <button class="tw__pill" style="--x:2%; --y:62%; --r:8deg" data-say="shiitake, walnut, smoked tofu. rolled by hand. nobody misses the pork.">not-meatballs</button>
+        <button class="tw__pill" style="--x:74%; --y:58%; --r:-8deg" data-say="soy milk, nigari, a press older than the building.">tofu, pressed here</button>
+        <button class="tw__pill" style="--x:30%; --y:86%; --r:4deg" data-say="the one rule: if we can make it, we don't buy it.">no packets</button>
+      </div>
+    </section>
+
+    <!-- ========== 03 · BY HAND — ref: green dumpling poster (giant pink vertical type, dumpling in chopsticks, crumbs) ========== -->
+    <section class="dp" id="byhand">
+      <h2 class="dp__t" aria-label="By hand, daily"><span>By</span><span>hand</span><span>daily</span></h2>
+      <div class="dp__fig" id="dpFig" data-cursor="pleat it">
+        <div class="slot slot--cut" data-img="img/KITCHEN/dumpling.png" data-label="dumpling.png · one dumpling held up in chopsticks, cutout. 3:4" style="--tone:#e9dcc0; --shape: 50%"></div>
+      </div>
+      <div class="dp__crumbs" id="dpCrumbs" aria-hidden="true"></div>
+      <p class="dp__v mono">pleated in žižkov · 18 folds each</p>
+      <div class="dp__count">
+        <p class="dp__n"><b id="dpN">0</b><span>/ 600</span></p>
+        <p class="mono">dumplings folded today, by four people and a radio.</p>
+      </div>
+      <p class="dp__foot mono">knedlíčky · since 2026 · <span>0 animals</span></p>
+    </section>
+
+    <!-- ========== 04 · A DAY — ref: banner design sheet (stacked loud banners on black) ========== -->
+    <section class="bn" id="day">
+      <div class="bn__head">
+        <p class="mono">banner design · a day at bez</p>
+        <p class="mono">@bez.zizkov</p>
+      </div>
+      <div class="bn__list">
+        <article class="bn__b bn__b--1" data-cursor="07:00">
+          <div class="slot bn__ph" data-img="img/KITCHEN/day-1.jpg" data-label="day-1.jpg · dough or bread proving, early light. 16:9" style="--tone:#d9a35b"></div>
+          <p class="bn__time">07:00</p>
+          <h3 class="bn__w">Dough wakes up</h3>
+          <p class="bn__s mono">buchty proving · coffee for the crew</p>
+        </article>
+        <article class="bn__b bn__b--2" data-cursor="10:00">
+          <div class="slot bn__ph" data-img="img/KITCHEN/day-2.jpg" data-label="day-2.jpg · huge pots steaming on a stove. 16:9" style="--tone:#6b5a44"></div>
+          <p class="bn__time">10:00</p>
+          <h3 class="bn__w">Broth on!!</h3>
+          <p class="bn__s mono">kombu in · the windows fog up</p>
+        </article>
+        <article class="bn__b bn__b--3" data-cursor="12:00">
+          <div class="slot bn__ph" data-img="img/KITCHEN/day-3.jpg" data-label="day-3.jpg · a busy pass, plates going out. 16:9" style="--tone:#c4472c"></div>
+          <p class="bn__time">12:00</p>
+          <h3 class="bn__w">Doors open</h3>
+          <p class="bn__s mono">first guláš out · nobody asks about the beef</p>
+        </article>
+        <article class="bn__b bn__b--4" data-cursor="23:00">
+          <div class="slot bn__ph" data-img="img/KITCHEN/day-4.jpg" data-label="day-4.jpg · empty kitchen at night, one lamp on. 16:9" style="--tone:#24304a"></div>
+          <p class="bn__time">23:00</p>
+          <h3 class="bn__w">Last guláš</h3>
+          <p class="bn__s mono">mop · radio off · bez until tomorrow</p>
+        </article>
+      </div>
+      <p class="bn__now mono" id="bnNow">right now in praha: <b>—</b></p>
+    </section>
+
+    <!-- ========== 05 · THE CREW — ref: designer xiaoqi card sheet (four mini posters on grey) ========== -->
+    <section class="crew" id="crew">
+      <div class="crew__head">
+        <p class="mono">designed by the crew · flip a card</p>
+        <h2 class="crew__t">The crew</h2>
+      </div>
+      <div class="crew__grid" id="crewGrid"></div>
+      <p class="crew__foot mono">four people, one stove, zero animals. tap a card to see what they cook without.</p>
+    </section>
+
+    <!-- ========== 06 · BOOK A TABLE — ref: mango product cards (white, two rounded cards, add to cart) ========== -->
+    <section class="bk" id="book">
+      <h2 class="bk__t">A table, <i>without</i> the wait.</h2>
+      <div class="bk__cards">
+        <article class="bk__card" id="bkCard">
+          <div class="bk__ph"><div class="slot" data-img="img/KITCHEN/book-1.jpg" data-label="book-1.jpg · a set table by the window, warm. 1:1" style="--tone:#e2a63a"></div><span class="bk__tag mono">table</span></div>
+          <div class="bk__body">
+            <div class="bk__row"><h3>A table at Bez</h3><b class="mono">0 Kč</b></div>
+            <p class="bk__p">Bořivojova 57. Window seats go first. Dogs welcome, meat not.</p>
+            <div class="bk__opts" role="group" aria-label="people">
+              <span class="mono">people</span>
+              <div class="bk__seg" id="bkPeople"><button>1</button><button aria-pressed="true">2</button><button>4</button><button>6+</button></div>
+            </div>
+            <div class="bk__opts" role="group" aria-label="time">
+              <span class="mono">time</span>
+              <div class="bk__seg" id="bkTime"><button>12:30</button><button>18:00</button><button aria-pressed="true">19:30</button><button>21:00</button></div>
+            </div>
+            <button class="bk__btn" id="bkGo" data-cursor="hold it">Hold my table</button>
+          </div>
+        </article>
+        <article class="bk__card bk__card--y" id="bkOut">
+          <div class="bk__ph"><div class="slot" data-img="img/KITCHEN/book-2.png" data-label="book-2.png · a paper takeaway bag with a bowl inside. 1:1" style="--tone:#c7742c"></div><span class="bk__tag mono">to go</span></div>
+          <div class="bk__body">
+            <div class="bk__row"><h3>Bez to go</h3><b class="mono">219 Kč</b></div>
+            <p class="bk__p">This week's menu in a paper bag, in a bowl you bring back. Pick up at the window from 17:00.</p>
+            <div class="bk__opts" role="group" aria-label="jars">
+              <span class="mono">bowls</span>
+              <div class="bk__qty"><button id="jarMinus" aria-label="one less">−</button><b id="jarN">1</b><button id="jarPlus" aria-label="one more">+</button></div>
+            </div>
+            <p class="bk__p mono" id="jarSum">1 bowl · 219 Kč · bring it back, get 20 off</p>
+            <button class="bk__btn" id="jarGo" data-cursor="it's a concept">Put one aside</button>
+          </div>
+        </article>
+      </div>
+      <p class="bk__note mono" id="bkNote">nothing held yet.</p>
+    </section>
+
+    <footer class="ft">
+      <h2 class="ft__title soft"><span class="line-mask"><span class="ln">Come hungry.</span></span><span class="line-mask"><span class="ln">Leave without.</span></span></h2>
+      <div class="ft__grid">
+        <div><p class="ft__k">Sitemap</p><p class="ft__links"><a href="index.html">Home</a><a href="menu.html">Menu</a><a href="weeks.html">Every week</a><a href="taken-out.html">Taken out</a><a href="kitchen.html">The kitchen</a></p></div>
+        <div><p class="ft__k">Find us</p><p class="ft__links"><span>Bořivojova 57, Praha 3</span><span>+420 555 010 057</span><a href="mailto:hello@bez.cz">hello@bez.cz</a><span id="kitchenState">kitchen: checking…</span></p></div>
+        <div><p class="ft__k">Hours</p><p class="ft__links"><span>Mon: closed, writing the new menu</span><span>Tue to Fri: 12 PM — 11 PM</span><span>Sat to Sun: 10 AM — 11 PM</span></p></div>
+      </div>
+      <div class="ft__bottom">
+        <span>© 2026 BEZ — a concept. nothing from a packet.</span>
+        <span data-clock>praha 00:00</span>
+        <span class="ft-sign">concept, design &amp; code by <span class="sig">ghostly.grl</span> ♥</span>
+      </div>
+    </footer>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/main.js?v=20261028-22"></script>
+  <script src="js/kitchen.js?v=20261028-22"></script>
+</body>
+<!--
+   *    /\_/\      +
+       ( o.o )   <3  ghostly.grl
+   +    > ^ <   🍜     *
+       nothing from a packet.
+-->
+</html>

@@ -1,0 +1,192 @@
+/* =========================================================
+   BEZ — index.css (home)
+   collage editorial × two-colour posters, one ref per screen
+   concept, design & code by ghostly.grl ♥
+   ========================================================= */
+
+/* ---------- 01 · HERO — LAZY NIGHTS spread ---------- */
+.lazy { position: relative; display: grid; grid-template-columns: 40% 1fr; height: 100svh; min-height: 620px; background: var(--tomato); overflow: hidden; }
+.lazy__panel { position: relative; z-index: 2; background: var(--tomato); color: var(--mint); overflow: hidden; }
+.lazy__type {
+  position: absolute; top: 1.5vh; bottom: 1.5vh; left: 0; right: 0; padding-right: clamp(10px, 2vw, 30px);
+  writing-mode: vertical-rl; transform: rotate(180deg); line-height: .8; font-size: 100px;
+}
+.lazy__type > span { display: block; inline-size: max-content; white-space: nowrap; }
+.lazy__small { margin-inline-start: auto; font-size: .4em; line-height: .9; }
+.lazy__big { letter-spacing: -.035em; }
+.lazy__big .c, .lazy__small .c { display: inline-block; }
+.lazy__diamond { position: absolute; z-index: 3; left: 7%; top: 50%; width: clamp(150px, 15vw, 230px); aspect-ratio: 200 / 140; color: var(--navy); rotate: -4deg; }
+.lazy__diamond > svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.lazy__diamond > svg path { fill: none; stroke: currentColor; stroke-width: 2.6; }
+.lazy__diamond p { position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; gap: 4px; text-align: center; }
+.lazy__diamond b { font-stretch: 62%; font-weight: 800; font-size: clamp(20px, 2vw, 30px); line-height: .9; text-transform: uppercase; transform: skewX(-10deg); letter-spacing: .01em; }
+.lazy__diamond .wave { width: 34px; height: 6px; }
+.lazy__diamond .wave path { fill: none; stroke: currentColor; stroke-width: 1.6; }
+.lazy__photo { position: relative; overflow: hidden; }
+.lazy__photo .slot { position: absolute; inset: -7% 0; will-change: transform; }
+.lazy__note { right: calc(var(--gut) + 1vw); bottom: 5vh; }
+.note__btn {
+  position: absolute; left: 50%; bottom: -19px; translate: -50% 0; display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%;
+  background: var(--sky); border: 1.5px solid var(--navy); color: var(--navy); font-family: var(--f-mono); font-size: 15px; transition: transform .4s var(--ease);
+}
+.note__btn:hover { transform: translateY(4px); }
+
+/* ---------- 02 · INTRO — nôm poster on the wall ---------- */
+.nom { position: relative; display: grid; grid-template-columns: 1fr 33%; gap: 0; min-height: 100svh; padding: 8vh 0 8vh var(--gut); background: #2b211b; }
+.nom::before { /* wall grain */
+  content: ''; position: absolute; inset: 0; opacity: .5; pointer-events: none;
+  background: repeating-linear-gradient(90deg, rgba(255, 255, 255, .025) 0 2px, transparent 2px 9px), repeating-linear-gradient(0deg, rgba(0, 0, 0, .12) 0 1px, transparent 1px 5px);
+}
+.nom__poster {
+  position: relative; z-index: 1; display: grid; justify-items: center; align-content: space-between; gap: 3vh; overflow: hidden;
+  padding: clamp(24px, 4vh, 44px) clamp(18px, 3vw, 44px) clamp(18px, 3vh, 34px); background: var(--orange); color: var(--butter);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, .45);
+}
+.nom__poster::after { /* print grain */
+  content: ''; position: absolute; inset: 0; opacity: .25; mix-blend-mode: multiply; pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
+}
+.nom__tags { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+.nom__tags li { padding: 7px 18px 6px; border: 1.5px solid var(--butter); font-weight: 800; font-size: clamp(10px, .85vw, 12px); text-transform: uppercase; letter-spacing: .08em; }
+.nom__tags li.is-fill { background: var(--butter); color: var(--orange); }
+.nom__q { text-align: center; font-weight: 900; font-size: clamp(15px, 1.6vw, 24px); line-height: 1.02; text-transform: uppercase; letter-spacing: .01em; }
+.nom__mid { position: relative; width: calc(100% + 2 * clamp(18px, 3vw, 44px)); height: clamp(150px, 21vw, 300px); display: grid; place-items: center; }
+.nom__giant { position: absolute; left: 0; top: 50%; translate: 0 -50%; white-space: nowrap; font-weight: 500; font-stretch: 100%; font-size: clamp(130px, 17vw, 260px); line-height: .8; letter-spacing: -.05em; will-change: transform; }
+.nom__win { position: relative; z-index: 2; width: 40%; aspect-ratio: 16 / 10; border-radius: 16px; }
+.nom__word { width: 100%; text-align: center; font-weight: 900; }
+.nom__word [data-fit] { line-height: .78; padding-bottom: .04em; }
+.nom__side { position: relative; z-index: 2; }
+.nom__sidephoto { position: absolute; inset: 0; box-shadow: 0 30px 60px rgba(0, 0, 0, .45); }
+.nom__tape {
+  position: absolute; z-index: 3; left: -14%; bottom: 18%; padding: 12px 20px 10px; border-radius: 8px; background: var(--butter); color: var(--orange);
+  font-weight: 900; font-size: clamp(14px, 1.5vw, 22px); line-height: 1; text-transform: uppercase; rotate: -10deg; box-shadow: 0 10px 24px rgba(0, 0, 0, .35);
+}
+
+/* ---------- 03 · NO TUNA — SYDORENKO ---------- */
+.poke { position: relative; background: var(--red); color: var(--cream); }
+.poke__pin { position: relative; height: 100svh; min-height: 640px; overflow: hidden; }
+.poke__plate {
+  --d: min(80vh, 54vw);
+  position: absolute; z-index: 1; width: var(--d); aspect-ratio: 1; left: calc(27vw - var(--d) / 2); top: calc(46% - var(--d) / 2);
+  border-radius: 50%; will-change: transform;
+}
+.poke__plate .slot { position: absolute; inset: 0; }
+.poke__panel { position: absolute; z-index: 2; top: 0; bottom: 0; left: 52%; right: 0; padding: 9vh var(--gut) 0 clamp(20px, 3vw, 46px); background: var(--red); }
+.poke__panel::before {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(circle, rgba(70, 8, 0, .3) 1.3px, transparent 1.9px) 0 0 / 10px 10px;
+  -webkit-mask: linear-gradient(to right, transparent 25%, #000 95%); mask: linear-gradient(to right, transparent 25%, #000 95%);
+}
+.poke__word { position: relative; display: grid; color: var(--cream); font-size: 1px; }
+.poke__ln { display: block; overflow: hidden; line-height: .84; }
+.poke__ln [data-fit] { line-height: .86; letter-spacing: -.005em; }
+.poke__box { position: absolute; z-index: 3; top: 8vh; left: var(--gut); padding: 14px 20px 16px; border: 1.5px solid var(--cream); font-size: clamp(12px, 1.2vw, 16px); line-height: 1.5; letter-spacing: .22em; }
+.poke__box span { display: block; width: 30px; height: 1.5px; margin-top: 8px; background: currentColor; }
+.poke__note {
+  position: absolute; z-index: 3; left: calc(27vw - 20px); top: 58%; padding: 12px 16px; background: var(--cream); color: var(--red);
+  font-size: 12px; line-height: 1.45; rotate: -5deg; opacity: 0; box-shadow: 0 10px 24px rgba(60, 5, 0, .3);
+}
+.poke__ing { position: absolute; z-index: 3; left: var(--gut); right: var(--gut); bottom: 4vh; }
+.poke__k { display: inline-block; font-size: 12px; letter-spacing: .24em; padding-bottom: 6px; margin-bottom: 18px; border-bottom: 1.5px solid currentColor; }
+.poke__ing ul { list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); }
+.poke__ing li { display: grid; justify-items: center; gap: 10px; padding: 4px 10px; text-align: center; font-size: clamp(13px, 1.25vw, 17px); line-height: 1.2; }
+.poke__ing li + li { border-left: 1px solid rgba(243, 230, 208, .45); }
+.poke__ing svg { width: 48px; height: 32px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.poke__ing svg circle { fill: currentColor; stroke: none; }
+
+/* ---------- 04 · GULÁŠ — chow mein poster ---------- */
+.gulas { position: relative; height: 110svh; min-height: 720px; background: var(--blue); color: var(--yolk); overflow: hidden; }
+.gulas::before { /* canvas texture */
+  content: ''; position: absolute; inset: 0; z-index: 0; opacity: .35; pointer-events: none; mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.7' numOctaves='3'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.gulas__plate { position: absolute; z-index: 1; width: min(72vw, 120vh); aspect-ratio: 1; right: -16vw; top: 10%; border-radius: 50%; overflow: hidden; will-change: transform; }
+.gulas__plate .slot { position: absolute; inset: 0; filter: grayscale(1) contrast(1.25) brightness(1.1); mix-blend-mode: screen; opacity: .5; }
+.gulas__bowl { position: absolute; z-index: 2; width: min(84vw, 130vh); aspect-ratio: 1; right: -18vw; bottom: -44%; will-change: transform; }
+.gulas__bowl .slot { position: absolute; inset: 0; }
+.gulas__word {
+  position: absolute; z-index: 3; top: -4vh; bottom: -2vh; left: -1.4vw; writing-mode: vertical-rl; transform: rotate(180deg);
+  font-weight: 800; font-size: 100px; line-height: .76; letter-spacing: -.05em; opacity: .93; pointer-events: none;
+}
+.gulas__col { display: block; inline-size: max-content; white-space: nowrap; will-change: transform; }
+.gulas__list {
+  position: absolute; z-index: 4; top: 7vh; left: 26vw; right: 22vw; color: var(--cream); font-size: clamp(9px, .78vw, 11px); line-height: 1.38;
+  text-align: justify; text-align-last: justify; word-spacing: .3em;
+}
+.gulas__tag { position: absolute; z-index: 4; right: var(--gut); bottom: 3vh; color: var(--cream); font-size: 11px; }
+.gulas__cap { position: absolute; z-index: 4; right: var(--gut); top: 7vh; color: var(--yolk); font-size: 11px; writing-mode: vertical-rl; }
+.gulas__cap s::after { background: var(--cream); }
+
+/* ---------- 05 · WITHOUT — budbites ---------- */
+.bb { position: relative; display: grid; grid-template-columns: minmax(0, 1fr); padding: clamp(24px, 4vw, 50px) var(--gut) clamp(30px, 5vw, 60px); background: var(--leaf); color: var(--pink); overflow: hidden; }
+.bb__rows, .bb__bowl { grid-area: 1 / 1; }
+.bb__rows { position: relative; z-index: 1; }
+.bb__row { font-stretch: 112%; font-weight: 800; letter-spacing: -.035em; line-height: .8; white-space: nowrap; }
+.bb__row [data-fit] { line-height: .8; padding-bottom: .02em; }
+.bb__row--run { font-size: var(--bbfs, 20vw); }
+.bb__row--run span { display: inline-block; will-change: transform; }
+.bb__bowl { position: sticky; z-index: 2; top: calc(50vh - min(36vw, 44vh)); align-self: start; justify-self: end; width: min(72vw, 88vh); aspect-ratio: 1; margin: 14vw -12vw 0 0; will-change: transform; }
+.bb__bowl .slot { position: absolute; inset: 0; }
+.bb__cap { position: relative; z-index: 3; margin-top: 22px; font-size: 11px; line-height: 1.5; color: var(--pink); }
+.bb__cap b { font-weight: 500; background: var(--pink); color: var(--leaf); padding: 0 5px; }
+
+/* ---------- 06 · ANATOMY — burger / onion / mayo / bacon ---------- */
+.anat { display: grid; grid-template-columns: 1fr 1fr; background: var(--ink); }
+.tile { position: relative; aspect-ratio: 4 / 3.3; overflow: hidden; }
+.tile .slot { position: absolute; inset: 0; }
+.tile__img { will-change: transform; }
+.tile--prod { background: #e8e8e5; }
+.tile--prod .slot { inset: 10% 14% 14%; }
+.tile--prod figcaption { position: absolute; left: 22px; bottom: 18px; font-size: 11px; color: var(--ink); }
+.tile--prod s::after { background: var(--tomato); }
+.tile__lbl {
+  position: absolute; inset: 0; z-index: 2; display: grid; place-content: center; justify-items: center; gap: 4px; text-align: center; pointer-events: none;
+  color: #fff; text-shadow: 0 2px 24px rgba(0, 0, 0, .28); font-stretch: 125%; font-weight: 800; text-transform: uppercase; letter-spacing: .01em;
+}
+.tile__w { font-size: clamp(30px, 4.6vw, 74px); line-height: .92; }
+.tile__s { --s: 0; }
+.tile__s::after { background: var(--tomato); height: .1em; }
+.tile__new { font-size: clamp(22px, 3vw, 46px); line-height: 1; color: var(--mint); }
+.tile__lbl small { margin-top: 10px; font-size: 10.5px; letter-spacing: .06em; font-stretch: 100%; font-weight: 400; opacity: .9; }
+
+/* ---------- 07 · ŽIŽKOV — NYC NYC® ---------- */
+.zz { position: relative; height: 100svh; min-height: 620px; background: var(--blush); color: var(--blood); overflow: hidden; }
+.zz__type { position: absolute; inset: 7vh var(--gut) 5vh; display: grid; grid-template-rows: 1fr 1fr; align-items: end; font-stretch: 100%; font-weight: 900; }
+.zz__row { display: flex; justify-content: space-between; font-size: min(46vh, 31vw); line-height: .78; }
+.zz__row span { display: inline-block; will-change: transform; }
+.zz__reg { position: absolute; z-index: 3; right: calc(var(--gut) + 1vw); bottom: 3vh; color: var(--blood); font-weight: 700; font-size: clamp(30px, 3.4vw, 54px); line-height: 1; transition: transform .6s var(--ease); }
+.zz__reg:hover { transform: rotate(360deg); }
+.zz__hand { position: absolute; z-index: 2; left: 50%; bottom: -2vh; width: min(64vh, 46vw); aspect-ratio: 3 / 4; translate: -50% 0; will-change: transform; }
+.zz__hand .slot { position: absolute; inset: 0; }
+.zz__c { position: absolute; z-index: 3; font-size: 11px; line-height: 1.45; }
+.zz__c--tl { top: 2.4vh; left: var(--gut); }
+.zz__c--bl { bottom: 2.4vh; left: var(--gut); }
+.zz__c--tr { top: 2.4vh; right: var(--gut); text-align: right; }
+.zz__book { position: absolute; z-index: 4; right: calc(var(--gut) + 5vw); top: 46%; padding: 12px 18px; background: var(--blush); border: 1.5px solid currentColor; font-size: 13px; rotate: -6deg; transition: background-color .3s, color .3s; }
+.zz__book:hover { background: var(--blood); color: var(--blush); }
+
+/* ---------- responsive ---------- */
+@media (max-width: 860px) {
+  .lazy { grid-template-columns: 50% 1fr; grid-template-rows: 92svh auto; height: auto; min-height: 0; }
+  .lazy__type { top: 64px; }
+  .lazy__diamond { left: 50%; top: 30%; width: 128px; }
+  .lazy__note { position: relative; grid-column: 1 / -1; right: auto; bottom: auto; margin: -24px auto 50px; width: min(340px, 88vw); font-size: 13px; }
+  .nom { grid-template-columns: 1fr; padding: 6vh var(--gut); gap: 6vh; }
+  .nom__side { height: 70vh; }
+  .nom__tape { left: -4%; }
+  .nom__win { width: 62%; }
+  .poke__plate { --d: 92vw; left: -30vw; top: 16vh; }
+  .poke__panel { left: 46%; padding-top: 22vh; }
+  .poke__note { left: 10vw; top: 52vh; }
+  .poke__ing ul { grid-template-columns: repeat(4, 1fr); }
+  .poke__ing li { padding: 2px 4px; font-size: 10.5px; gap: 6px; }
+  .poke__ing svg { width: 34px; height: 24px; }
+  .gulas { height: 100svh; }
+  .gulas__list { left: 34vw; right: var(--gut); top: 9vh; }
+  .gulas__bowl { width: 130vw; right: -40vw; bottom: -20%; }
+  .gulas__plate { width: 110vw; right: -40vw; top: 24%; }
+  .gulas__cap { display: none; }
+  .anat { grid-template-columns: 1fr; }
+  .zz__hand { width: 76vw; }
+  .zz__book { top: auto; bottom: 16vh; right: var(--gut); }
+}
